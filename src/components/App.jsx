@@ -1,21 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navbar from './Layouts/Navbar';
-import Home from './pages/Home';
-import Staff from './pages/Staff'
-
+import React from "react";
+import { Container } from "react-bootstrap";
+import SignUp from "./SignUp";
 
 function App() {
   return (
-    <Router>
-        <div>
-            hellodf
-            <Navbar />
-            <Route path='/' exact={true} Component={Home} />
-            <Route path='/staff' exact={true} Component={Staff} />
+    <div>
+      <Container
+        className="d-flex align-items-center justify-content-center"
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="w-100" style={{maxWidth:"300px"}}>
+        <SignUp />
         </div>
-    </Router>
-  )
+
+      </Container>
+    </div>
+  );
 }
 
-export default App
+export default App;
