@@ -1,7 +1,7 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-
-const app = firebase.initializeApp({
+// import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import { initializeApp } from "firebase/app";
+const app = initializeApp({
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN  ,
     projectId: process.env.REACT_APP_PROJECT_ID ,
@@ -9,6 +9,6 @@ const app = firebase.initializeApp({
     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID ,
     appId: process.env.REACT_APP_APP_ID 
   });
-
-export const auth = app.auth()
-export default app;
+  
+  export const auth = app.deafult.auth();
+  export default app;
